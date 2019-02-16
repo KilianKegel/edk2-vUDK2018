@@ -1,29 +1,19 @@
-# EDK II Project
+# edk2-UDK2018
 
-A modern, feature-rich, cross-platform firmware development environment
-for the UEFI and PI specifications from www.uefi.org.
+## Goal
+Get the MinnowBoard running with UDK2018.
+NOTE: Visual Studio is here only used for editing the project.
+The build process is pure EDK!
 
-Contributions to the EDK II open source project are covered by the
-[TianoCore Contribution Agreement 1.1](Contributions.txt)
+## HowTo
+1. download and install https://www.python.org/ftp/python/2.7/python-2.7.amd64.msi
+   at c:\Python27
+2. download and install https://www.nasm.us/pub/nasm/releasebuilds/2.13/win64/nasm-2.13-installer-x64.exe
+   at c:\NASM
+3. download VS12017 from here: https://visualstudio.microsoft.com/downloads/
+4. select: "Desktop development with C++"
+	![component selection](VS2017-components.png)	
+5. after installation is finished, open _edk2-vUDK2018.sln_
 
-The majority of the content in the EDK II open source project uses a
-[BSD 2-Clause License](License.txt).  The EDK II open source project contains
-the following components that are covered by additional licenses:
-* [AppPkg/Applications/Python/Python-2.7.2/Tools/pybench](AppPkg/Applications/Python/Python-2.7.2/Tools/pybench/LICENSE)
-* [AppPkg/Applications/Python/Python-2.7.2](AppPkg/Applications/Python/Python-2.7.2/LICENSE)
-* [AppPkg/Applications/Python/Python-2.7.10](AppPkg/Applications/Python/Python-2.7.10/LICENSE)
-* [BaseTools/Source/C/BrotliCompress](BaseTools/Source/C/BrotliCompress/LICENSE)
-* [MdeModulePkg/Library/BrotliCustomDecompressLib](MdeModulePkg/Library/BrotliCustomDecompressLib/LICENSE)
-* [OvmfPkg](OvmfPkg/License.txt)
-* [CryptoPkg/Library/OpensslLib/openssl](CryptoPkg/Library/OpensslLib/openssl/LICENSE)
-
-The EDK II Project is composed of packages.  The maintainers for each package
-are listed in [Maintainers.txt](Maintainers.txt).
-
-# Resources
-* [TianoCore](http://www.tianocore.org)
-* [EDK II](https://github.com/tianocore/tianocore.github.io/wiki/EDK-II)
-* [Getting Started with EDK II](https://github.com/tianocore/tianocore.github.io/wiki/Getting-Started-with-EDK-II)
-* [Mailing Lists](https://github.com/tianocore/tianocore.github.io/wiki/Mailing-Lists)
-* [TianoCore Bugzilla](https://bugzilla.tianocore.org)
-* [How To Contribute](https://github.com/tianocore/tianocore.github.io/wiki/How-To-Contribute)
+## Revision history
+### 20190216/4 - bugfix, update

@@ -8674,6 +8674,7 @@
     <None Include="CryptoPkg\Library\OpensslLib\OpensslLibCrypto.uni" />
     <None Include="CryptoPkg\Library\TlsLib\TlsLib.inf" />
     <None Include="CryptoPkg\Library\TlsLib\TlsLib.uni" />
+    <None Include="dbg.bat" />
     <None Include="DuetPkg\AcpiResetDxe\Reset.inf" />
     <None Include="DuetPkg\BiosVideoThunkDxe\BiosVideo.inf" />
     <None Include="DuetPkg\BootSector\bootsect.asm" />
@@ -9101,6 +9102,8 @@
     <None Include="EdkCompatibilityPkg\Sample\Platform\Generic\RuntimeDxe\StatusCode\Lib\RtPort80StatusCode\RtPort80StatusCode.inf" />
     <None Include="EdkCompatibilityPkg\Sample\Platform\Nt32\Ppi\EdkNt32PpiLib.inf" />
     <None Include="EdkCompatibilityPkg\Sample\Platform\Nt32\Protocol\EdkNt32ProtocolLib.inf" />
+    <None Include="edksetup.bat" />
+    <None Include="edksetup.sh" />
     <None Include="EdkShellBinPkg\EdkShellBinPkg.dec" />
     <None Include="EdkShellBinPkg\FullShell\FullShell.inf" />
     <None Include="EdkShellBinPkg\MinimumShell\MinimumShell.inf" />
@@ -9448,6 +9451,7 @@
     <None Include="IntelSiliconPkg\IntelSiliconPkg.dec" />
     <None Include="IntelSiliconPkg\IntelSiliconPkg.dsc" />
     <None Include="IntelSiliconPkg\Library\DxeSmbiosDataHobLib\DxeSmbiosDataHobLib.inf" />
+    <None Include="launch2017.bat" />
     <None Include="MdeModulePkg\Application\BootManagerMenuApp\BootManagerMenuApp.inf" />
     <None Include="MdeModulePkg\Application\BootManagerMenuApp\BootManagerMenuApp.uni" />
     <None Include="MdeModulePkg\Application\BootManagerMenuApp\BootManagerMenuAppExtra.uni" />
@@ -10934,6 +10938,7 @@
     <None Include="QuarkSocPkg\QuarkSouthCluster\Usb\Common\Pei\UsbPei.inf" />
     <None Include="QuarkSocPkg\QuarkSouthCluster\Usb\Ohci\Dxe\OhciDxe.inf" />
     <None Include="QuarkSocPkg\QuarkSouthCluster\Usb\Ohci\Pei\OhciPei.inf" />
+    <None Include="README.md" />
     <None Include="SecurityPkg\Hash2DxeCrypto\Hash2DxeCrypto.inf" />
     <None Include="SecurityPkg\Hash2DxeCrypto\Hash2DxeCrypto.uni" />
     <None Include="SecurityPkg\Hash2DxeCrypto\Hash2DxeCryptoExtra.uni" />

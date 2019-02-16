@@ -34201,6 +34201,17 @@
     <None Include="MdePkg\Library\BaseMemoryLibOptDxe\Arm\CompareGuid.asm">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="dbg.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="edksetup.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="edksetup.sh" />
+    <None Include="launch2017.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="AppPkg\Applications\Python\Python-2.7.2\Tools\msi\crtlicense.txt">
