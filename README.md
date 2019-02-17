@@ -2,8 +2,9 @@
 
 ## Goal
 Get the MinnowBoard running with UDK2018.
+
 NOTE: Visual Studio is here only used for editing the project.
-The build process is pure EDK!
+The build process is still pure EDK!
 
 ## HowTo
 1. download and install https://www.python.org/ftp/python/2.7/python-2.7.amd64.msi
