@@ -25,4 +25,7 @@ The build process is still pure EDK!
 4. enter "DBG" to start the UEFI BIOS EMULATION
 
 ## Revision history
+### 20190217/1
+* prevent VS2017 to start a build process
+
 ### 20190216/4 - bugfix, update
