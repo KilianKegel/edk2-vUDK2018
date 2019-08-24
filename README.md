@@ -22,8 +22,8 @@ The build process is still pure EDK!
 4. enter "DBG" to start the UEFI BIOS EMULATION
 
 ## Revision history
-### 20190824/1
-* add latest C Development Environment Packages (**CdePkg**, CdeSrcPkg** and **CdeValidationPkg**)
+### 20190824
+* add latest C Development Environment Packages (**CdePkg**, **CdeSrcPkg** and **CdeValidationPkg**)
 
 ### 20190217/1
 * prevent VS2017 to start a build process

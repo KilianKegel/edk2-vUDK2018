@@ -104,6 +104,8 @@
   #
   # Basic
   #
+  #MWDebug
+  CdeLib|CdePkg/CdeLib/CdeLib.inf
   BaseLib|MdePkg/Library/BaseLib/BaseLib.inf
   SynchronizationLib|MdePkg/Library/BaseSynchronizationLib/BaseSynchronizationLib.inf
   PrintLib|MdePkg/Library/BasePrintLib/BasePrintLib.inf
@@ -354,6 +356,17 @@
   #  PEI Phase modules
   ##
   MdeModulePkg/Core/Pei/PeiMain.inf
+  #MWDebug start
+  #CdePkg/CdeServices/CdeServicesPeiEmu.inf
+  CdePkg/CdeServices/CdeServicesPei.inf
+  CdePkg/CdeWelcomePei/CdeWelcomePei.inf
+  CdePkg/CdeLoadOptionsPei/CdeLoadOptionsPei.inf
+
+  CdeValidationPkg/TIME_H/clock/buildPEI.inf
+  CdeValidationPkg/CTYPE_H/ctype/buildPEI.inf
+  CdeValidationPkg/WCTYPE_H/wctype/buildPEI.inf
+
+  #MWDebug end
   MdeModulePkg/Universal/PCD/Pei/Pcd.inf {
     <LibraryClasses>
       PcdLib|MdePkg/Library/BasePcdLibNull/BasePcdLibNull.inf
@@ -382,6 +395,14 @@
     <BuildOptions>
       *_*_*_CC_FLAGS =
   }
+  #MWDebug
+  CdePkg/CdeServices/CdeServicesDxe.inf
+  CdePkg/CdeWelcomeDxe/CdeWelcomeDxe.inf
+  CdePkg/CdeLoadOptionsDxe/CdeLoadOptionsDxe.inf
+
+  CdeValidationPkg/TIME_H/clock/buildDXE.inf
+  CdeValidationPkg/CTYPE_H/ctype/buildDXE.inf
+  CdeValidationPkg/WCTYPE_H/wctype/buildDXE.inf
 
   MdeModulePkg/Universal/PCD/Dxe/Pcd.inf {
     <LibraryClasses>
@@ -601,3 +622,4 @@
   #  EdkCompatibilityPkg/Foundation/Library/Dxe/PrintLite/PrintLib.inf
   #  EdkCompatibilityPkg/Foundation/Library/Dxe/GraphicsLite/Graphics.inf
 
+# 

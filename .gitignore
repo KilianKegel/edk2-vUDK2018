@@ -2,3 +2,7 @@
 tags/
 .DS_Store
 .vs 
+build 
+build.??? 
+conf\ 
+conf/ 
