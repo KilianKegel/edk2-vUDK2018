@@ -174,4 +174,3 @@ pod2htmd.tmp
 
 # Windows manifest files
 *.manifest
-!/crypto/conf
