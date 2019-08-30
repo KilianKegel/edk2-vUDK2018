@@ -22,6 +22,9 @@ The build process is still pure EDK!
 4. enter "DBG" to start the UEFI BIOS EMULATION
 
 ## Revision history
+### 20190830/OpenSSL
+* add OpenSSL_1_1_0-stable to CryptoPkg\Library\OpensslLib
+
 ### 20190829/build batches
 * add bldDBG.bat and bldREL.bat
 
