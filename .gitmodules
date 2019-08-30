@@ -1,6 +1,3 @@
-[submodule "CryptoPkg/Library/OpensslLib/openssl"]
-	path = CryptoPkg/Library/OpensslLib/openssl
-	url = https://github.com/openssl/openssl
 [submodule "CdePkg"]
 	path = CdePkg
 	url = https://github.com/MinnowWare/CdePkg.git
