@@ -19,7 +19,7 @@ The build process is still pure EDK!
 1. run LAUNCH2019.BAT from the project root
 2. enter "bldREL.bat" or "bldDBG.bat" to build the EDK2
 3. enter "rd /s /q build" to clean previous build
-4. enter "DBG" to start the UEFI BIOS EMULATION
+4. enter "start DBG" to start the UEFI BIOS EMULATION
 
 ## Revision history
 ### 20190901/C vs BAT MinnowTools
