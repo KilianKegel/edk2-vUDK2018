@@ -7,10 +7,7 @@ NOTE: Visual Studio is here only used for editing the project.
 The build process is still pure EDK!
 
 ## HowTo/install
-1. install the build machine according to: https://github.com/MinnowWare/HowTo-setup-an-UEFI-Development-PC#howto-setup-an-uefi-development-pc
-
-2. select: "Desktop development with C++"
-	![component selection](VS2017-components.png)	
+Install the build machine according to: https://github.com/MinnowWare/HowTo-setup-an-UEFI-Development-PC#howto-setup-an-uefi-development-pc
 
 ## HowTo/edit
 1. after installation is finished, open _edk2-vUDK2018.sln_
