@@ -8,18 +8,18 @@
     http://opensource.org/licenses/bsd-license.php
     THE PROGRAM IS DISTRIBUTED UNDER THE BSD LICENSE ON AN "AS IS" BASIS,
     WITHOUT WARRANTIES OR REPRESENTATIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED.
-@file GitVerChk.c
+@file NasmVerChk.c
 
-@brief check build system, if GIT v2.23 is installed and available
+@brief check build system, if NASM v2.13 is installed and available
 
-@details check build system, if GIT v2.23 is installed and available
+@details check build system, if NASM v2.13 is installed and available
 
 
 @todo
 @mainpage
-    GitVerChk support tool
+    NasmVerChk support tool
 @section intro_sec Introduction
-    GitVerChk checks the installed GIT version to support "submodule"
+    NasmVerChk checks the installed NASM version to support "submodule"
 
 @subsection Parm_sec Command line parameters
     1. unarchive file1 file2 dir1 dir2
@@ -48,21 +48,21 @@ int main(int argc, char** argv) {
 
         if (argc > 1){
             if (iHelp) {
-                printf("GitVerChk - Git version check\nusage: gitverchk (w/o parameter) -- version check\n       gitverchk -h -- help screen\n       gitverchk -verbose -- verbose mode, print version match message\n");
+                printf("NasmVerChk - Nasm version check\nusage: nasmverchk (w/o parameter) -- version check\n       nasmverchk -h -- help screen\n       nasmverchk -verbose -- verbose mode, print version match message\n");
                 break;
             }
         }
         if (argc > 1 && 0 == strcmp(argv[1], "2831DEBC-DB3B-43D2-9635-E6464933C898")) {
 
-            t = scanf("git version %d.%d", &nMajor, &nMinor);
+            t = scanf("NASM version %d.%d", &nMajor, &nMinor);
 
-            if (!(t == 2 && nMajor >= 2 && nMinor >= 23)) {
-                fprintf(stderr, "WARNING: Use GIT v2.23 or higher. Previous versions have a submodule issue\n    https://git-scm.com/download/win\n");
+            if (!(t == 2 && nMajor == 2 && nMinor == 13)) {
+                fprintf(stderr, "WARNING: NASM v2.13 shall be used.\n    https://www.nasm.us/pub/nasm/releasebuilds/2.13/win64/nasm-2.13-installer-x64.exe\n");
                 nRet = 1;
             }
         } else {
 
-            nRet = system("git --version | gitverchk.exe 2831DEBC-DB3B-43D2-9635-E6464933C898");
+            nRet = system("nasm -v | nasmverchk.exe 2831DEBC-DB3B-43D2-9635-E6464933C898");
         }
     } while (0);
     
@@ -70,7 +70,7 @@ int main(int argc, char** argv) {
         system("ping 127.0.0.0 > nul");
     }
     else if (0 != iVerbose)
-        printf("GIT version accepted.\n");
+        printf("NASM version accepted.\n");
 
     return nRet;
 }

@@ -19,7 +19,12 @@ Install the build machine according to: https://github.com/MinnowWare/HowTo-setu
 4. enter "start DBG" to start the UEFI BIOS EMULATION
 
 ## Revision history
-### 20190901/C vs BAT MinnowTools
+### 20190906/improve tool chain check
+* add IASL version check
+* add PYTHON version check
+* add NASM version check
+
+### 20190901/tool chain check
 * GIT version check, since Git ver. 2.23 support submodules w/a error
 * dediBurn, for auto updating the MinnowBoard BIOS
 

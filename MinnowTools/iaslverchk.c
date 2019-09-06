@@ -8,18 +8,18 @@
     http://opensource.org/licenses/bsd-license.php
     THE PROGRAM IS DISTRIBUTED UNDER THE BSD LICENSE ON AN "AS IS" BASIS,
     WITHOUT WARRANTIES OR REPRESENTATIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED.
-@file GitVerChk.c
+@file IaslVerChk.c
 
-@brief check build system, if GIT v2.23 is installed and available
+@brief check build system, if c:\asl\IASL.EXE version 20160527-32 is installed and available
 
-@details check build system, if GIT v2.23 is installed and available
+@details check build system, if c:\asl\IASL.EXE version 20160527-32 is installed and available
 
 
 @todo
 @mainpage
-    GitVerChk support tool
+    IaslVerChk support tool
 @section intro_sec Introduction
-    GitVerChk checks the installed GIT version to support "submodule"
+    IaslVerChk checks the installed IASL version to support "submodule"
 
 @subsection Parm_sec Command line parameters
     1. unarchive file1 file2 dir1 dir2
@@ -30,8 +30,9 @@
 
 int main(int argc, char** argv) {
     int nRet = 0;
-    int nMajor, nMinor,t;
-    int iVerbose = 0, iHelp = 0, i;
+    int nMajor, t;
+    int iVerbose = 0, iHelp = 0, i,c;
+    char buffer[256];
     
     do {
         
@@ -48,21 +49,30 @@ int main(int argc, char** argv) {
 
         if (argc > 1){
             if (iHelp) {
-                printf("GitVerChk - Git version check\nusage: gitverchk (w/o parameter) -- version check\n       gitverchk -h -- help screen\n       gitverchk -verbose -- verbose mode, print version match message\n");
+                printf("IaslVerChk - Iasl version check\nusage: iaslverchk (w/o parameter) -- version check\n       iaslverchk -h -- help screen\n       iaslverchk -verbose -- verbose mode, print version match message\n");
                 break;
             }
         }
         if (argc > 1 && 0 == strcmp(argv[1], "2831DEBC-DB3B-43D2-9635-E6464933C898")) {
+            char* versionstrings[]={ {"Intel"},{"ACPI"},{"Component"},{"Architecture"},{"ASL+"},{"Optimizing"},{"Compiler"},{"version"},{"20160527-32"} };
 
-            t = scanf("git version %d.%d", &nMajor, &nMinor);
+            for (i = 0; i < sizeof(versionstrings) / sizeof(versionstrings[0]); i++) {
+                scanf("%s", buffer);
 
-            if (!(t == 2 && nMajor >= 2 && nMinor >= 23)) {
-                fprintf(stderr, "WARNING: Use GIT v2.23 or higher. Previous versions have a submodule issue\n    https://git-scm.com/download/win\n");
+                if (0 != strcmp(versionstrings[i], buffer)) {
+                    //printf("DIFF\n");
+                    nRet = 1000;
+                    break;
+                }
+            }
+
+            if (1000 == nRet) {
+                fprintf(stderr, "WARNING: IASL v20160527 shall be used.\n    https://acpica.org/sites/acpica/files/iasl-win-20160527.zip\n");
                 nRet = 1;
             }
         } else {
 
-            nRet = system("git --version | gitverchk.exe 2831DEBC-DB3B-43D2-9635-E6464933C898");
+            nRet = system("c:\\asl\\iasl.exe -v | iaslverchk.exe 2831DEBC-DB3B-43D2-9635-E6464933C898");
         }
     } while (0);
     
@@ -70,7 +80,7 @@ int main(int argc, char** argv) {
         system("ping 127.0.0.0 > nul");
     }
     else if (0 != iVerbose)
-        printf("GIT version accepted.\n");
+        printf("IASL version accepted.\n");
 
     return nRet;
 }

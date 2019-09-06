@@ -8,18 +8,18 @@
     http://opensource.org/licenses/bsd-license.php
     THE PROGRAM IS DISTRIBUTED UNDER THE BSD LICENSE ON AN "AS IS" BASIS,
     WITHOUT WARRANTIES OR REPRESENTATIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED.
-@file GitVerChk.c
+@file PyVerChk.c
 
-@brief check build system, if GIT v2.23 is installed and available
+@brief check build system, if PYTHON v2.7 is installed and available
 
-@details check build system, if GIT v2.23 is installed and available
+@details check build system, if PYTHON v2.7 is installed and available
 
 
 @todo
 @mainpage
-    GitVerChk support tool
+    PyVerChk support tool
 @section intro_sec Introduction
-    GitVerChk checks the installed GIT version to support "submodule"
+    PyVerChk checks the installed PYTHON version to support "submodule"
 
 @subsection Parm_sec Command line parameters
     1. unarchive file1 file2 dir1 dir2
@@ -48,21 +48,25 @@ int main(int argc, char** argv) {
 
         if (argc > 1){
             if (iHelp) {
-                printf("GitVerChk - Git version check\nusage: gitverchk (w/o parameter) -- version check\n       gitverchk -h -- help screen\n       gitverchk -verbose -- verbose mode, print version match message\n");
+                printf("PyVerChk - Python version check\nusage: pyverchk (w/o parameter) -- version check\n       pyverchk -h -- help screen\n       pyverchk -verbose -- verbose mode, print version match message\n");
                 break;
             }
         }
         if (argc > 1 && 0 == strcmp(argv[1], "2831DEBC-DB3B-43D2-9635-E6464933C898")) {
+            char buffer1[32], buffer2[32];
 
-            t = scanf("git version %d.%d", &nMajor, &nMinor);
-
-            if (!(t == 2 && nMajor >= 2 && nMinor >= 23)) {
-                fprintf(stderr, "WARNING: Use GIT v2.23 or higher. Previous versions have a submodule issue\n    https://git-scm.com/download/win\n");
+            t = scanf("Python %d.%d", &nMajor, &nMinor);
+            if (!(t == 2 && nMajor == 2 && nMinor == 7)) {
+                fprintf(stderr, "WARNING: PYTHON v2.7 shall be used.\n    https://www.python.org/ftp/python/2.7/python-2.7.amd64.msi\n");
                 nRet = 1;
             }
         } else {
-
-            nRet = system("git --version | gitverchk.exe 2831DEBC-DB3B-43D2-9635-E6464933C898");
+            //
+            // NOTE: Python reports version string to stderr. Therefor: "2>&1 | " to redirect STDERR to pipe
+            //
+            nRet = system("c:\\python27\\python.exe -V  2>&1 | pyverchk.exe 2831DEBC-DB3B-43D2-9635-E6464933C898");
+            if (255 == nRet)
+                fprintf(stderr, "WARNING: PYTHON v2.7 not installed in \"c:\\python27\\\".\n");
         }
     } while (0);
     
@@ -70,7 +74,7 @@ int main(int argc, char** argv) {
         system("ping 127.0.0.0 > nul");
     }
     else if (0 != iVerbose)
-        printf("GIT version accepted.\n");
+        printf("PYTHON version accepted.\n");
 
     return nRet;
 }
