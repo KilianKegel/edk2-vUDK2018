@@ -48,5 +48,11 @@ echo ###                                                                        
 echo ### enter "rd /s /q build" to clean previous build                              ###
 echo ### enter "start DBG" to start the UEFI BIOS EMULATION                          ###
 echo ###################################################################################
+if not exist CdePkg\readme.md (
+    echo ###################################################################################
+    echo ###       SUBMODULES MISSING ### SUBMODULES MISSING ### SUBMODULES MISSING      ###
+    echo ###################################################################################
+    @echo Please run "git submodule update --init --recursive"
+)
 %COMSPEC% /k echo Welcome, to the jungle...
 :EOF

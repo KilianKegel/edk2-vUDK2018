@@ -1,4 +1,4 @@
-# edk2-staging / [**CdePkg**](https://github.com/MinnowWare/CdePkg#cdepkg)
+# **edk2-vUDK2018** / [**CdePkg**](https://github.com/MinnowWare/CdePkg#cdepkg)
 * [Introduction](https://github.com/MinnowWare/edk2-vUDK2018#introduction)
 * [Goal](https://github.com/MinnowWare/edk2-vUDK2018#goal)
 * [HowTo/install/build](https://github.com/MinnowWare/edk2-vUDK2018#howtoinstallbuildedit)
@@ -16,11 +16,11 @@
 https://minnowboard.org/
 
 ## Introduction
-**This edk2-staging branch introduces the [**_CdePkg_**](https://github.com/MinnowWare/CdePkg#cdepkg) and
+**This **edk2-vUDK2018** introduces the [**_CdePkg_**](https://github.com/MinnowWare/CdePkg#cdepkg) and
 the [**_CdeValidationPkg_**](https://github.com/MinnowWare/CdeValidationPkg#cdevalidationpkg) to the
 UEFI/Tianocore open source community.**
 
-edk2-staging(branch CdePkg) is the Git-*Subproject* in the [UDK2018-MinnowBoard](https://github.com/MinnowWare/UDK2018-MinnowBoard) project to build the MinnowBoard UEFI BIOS,
+**edk2-vUDK2018** is the Git-*Subproject* in the [UDK2018-MinnowBoard](https://github.com/MinnowWare/UDK2018-MinnowBoard) project to build the MinnowBoard UEFI BIOS,
 but can also be used stand alone in Emulation Mode (Nt32Pkg) (NOTE: In emulation mode timing calulation assumes to run a 1GHz platform).
 
 
@@ -36,16 +36,16 @@ to get the MinnowBoard running with the open source [UEFI BIOS Tianocore\EDK2](h
 	the [**_CdeValidationPkg_**](https://github.com/MinnowWare/CdeValidationPkg#cdevalidationpkg) to the
 	UEFI/Tianocore open source community.**
 
-2. get the MinnowBoard and the EDK2 Emulation (Nt32Pkg) running with latest released UDK2018 and latest Visual Studio VS2019 buildenvironment
+2. get the MinnowBoard and the EDK2 Emulation (Nt32Pkg) running with the latest released UDK2018 and the latest Visual Studio VS2019 buildenvironment
 3. use OpenSSL_1_1_0-stable in the component CryptoPkg\Library\OpensslLib
 
 
 It is considered as a improvement over traditional UEFI BIOS development, since it introduces
-* stable, precise, chipset (ACPI timer) independant C library conform [`clock()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/clock?view=vs-2019) for POST and UEFI Shell in millisecond resolution
+* stable, precise, chipset (ACPI timer) independent C library conform [`clock()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/clock?view=vs-2019) for POST and UEFI Shell in millisecond resolution
 * unlimited (buffer less) [`printf()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l?view=vs-2019)-family and [`scanf()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l?view=vs-2019)-family implementation
 * Standard C conform format specifiers for [`printf()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l?view=vs-2019)-family and [`scanf()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l?view=vs-2019)-family
-* satisfies all the Microsoft C compiler intrinsic requirements with one and the same library (C++ not supported)
-* introduction of *Hosted Environment* instead of *Freestanding Environment* for POST driver
+* a library, which satisfies all the Microsoft C compiler intrinsic requirements with one and the same library (C++ not supported)
+* *Hosted Environment* instead of *Freestanding Environment* for POST driver
 
 This improvements shall enable UEFI and [modernFW](https://github.com/intel/ModernFW#modernfw-project)
 to provide a Standard C interface for any "C"-(open)source-based extention.
@@ -53,7 +53,7 @@ to provide a Standard C interface for any "C"-(open)source-based extention.
 NOTE: Visual Studio is here only used for editing the project. The build process is still pure EDK!
       (the startup error message of VS2017/VS2019 can be ignored)
 
-## HowTo/install/build/Edit
+## HowTo install/build/Edit
 ### Installation
 1. install a build machine according to https://github.com/MinnowWare/HowTo-setup-an-UEFI-Development-PC#howto-setup-an-uefi-development-pc
 
@@ -113,13 +113,13 @@ GIT-[Subproject **CdeValidationPkg**](https://github.com/MinnowWare/CdeValidatio
 # Related Projects
 | related project|annotation|
 |:-|:-|
-|[Torito C Library](https://github.com/JoaquinConoBolillo/torito-C-Library#torito-c-library)|C Library for UEFI Shell only. All projects below are build on or derived from *Torito C Library*|
+|[Torito C Library](https://github.com/JoaquinConoBolillo/torito-C-Library#torito-c-library)|C Library for UEFI Shell only. All projects below are built on or derived from *Torito C Library*|
 |[Visual ANSI C for UEFI Shell](https://github.com/JoaquinConoBolillo/Visual-ANSI-C-for-UEFI-Shell#visual-ansi-c-for-uefi-shell)|Visual Studio for UEFI Shell for beginners.|
 |[Visual DOS Tools for UEFI Shell](https://github.com/JoaquinConoBolillo/Visual-DOS-Tools-for-UEFI-Shell#visual-dos-tools-for-uefi-shell)|more command implementation|
 |[Visual HWTools for UEFI Shell](https://github.com/MinnowWare/Visual-HWTools-for-UEFI-Shell#visual-hwtools-for-uefi-shell)|HWTools: PCI- and GPIOSpy for Baytrail. MemSpy for all.|
-|[UDK2018-Minnowboard](https://github.com/MinnowWare/UDK2018-MinnowBoard#udk2018-minnowboard--cdepkg)|Get the MinnowBoard running with latest released EDK sourcecode and demonstrate *CdePkg* on real hardware|
-|[edk2-UDK2018](https://github.com/MinnowWare/edk2-vUDK2018#edk2-udk2018--cdepkg)|Get the Emulation (Nt32Pkg) running with latest released EDK sourcecode and demonstrate *CdePkg* on the Windows Desktop|
-|[CdePkg](https://github.com/MinnowWare/CdePkg#cdepkg)|*Torito C Library* reworked for UEFI POST usage|
+|[UDK2018-Minnowboard](https://github.com/MinnowWare/UDK2018-MinnowBoard#udk2018-minnowboard--cdepkg)|Gets the MinnowBoard running with the latest released EDK sourcecode and demonstrates *CdePkg* on real hardware|
+|[edk2-UDK2018](https://github.com/MinnowWare/edk2-vUDK2018#edk2-udk2018--cdepkg)|Gets the Emulation (Nt32Pkg) running with the latest released EDK sourcecode and demonstrates *CdePkg* on the Windows Desktop|
+|[CdePkg](https://github.com/MinnowWare/CdePkg#cdepkg)|*Torito C Library* redone for UEFI POST usage|
 |[CdeValidationPkg](https://github.com/MinnowWare/CdeValidationPkg#cdevalidationpkg)|Unit tests for *CdePkg*|
 
 ## Revision history
