@@ -1,5 +1,5 @@
 @echo off
-set path=%path%;"c:\NASM";%~dp0openssl-1.0.2r-x64_86-win64;%~dp0MinnowToolsC:\Program Files (x86)\DediProg\SF100;
+set path=%path%;"c:\NASM";%~dp0openssl-1.0.2r-x64_86-win64;%~dp0MinnowTools;C:\Program Files (x86)\DediProg\SF100;
 set PYTHON_HOME=C:\Python27
 if exist conf rd /s /q Conf
 

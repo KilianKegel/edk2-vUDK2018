@@ -11,7 +11,7 @@ call build -t VS%VSVERSION%
 
 if exist Build\NT32IA32\RELEASE_VS%VSVERSION%\IA32\SecMain.exe (
     echo ##############################################################################
-    echo ############################ BUILD SUCCESS ###################################
+    echo ### BUILD SUCCESS, run "start dbg RELEASE" to start debuggging ###############
     echo ##############################################################################
     dir /s /b Build\NT32IA32\RELEASE_VS%VSVERSION%\IA32\SecMain.exe
 ) else (
