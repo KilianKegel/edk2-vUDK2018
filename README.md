@@ -11,26 +11,30 @@
 * [Revision History](https://github.com/KilianKegel/edk2-vUDK2018#revision-history)
 
 
-![pci1](https://minnowboard.org/wp-content/uploads/2017/10/MBTurbot-quad-core-Top-0001-171002-1-555x370.png)
+![pci1](https://raw.githubusercontent.com/KilianKegel/pictures/master/minnowboardgray.png)
 
 https://minnowboard.org/
 
-## Introduction
+## Introduction **edk2-vUDK2018**
 **This **edk2-vUDK2018** introduces the [**_CdePkg_**](https://github.com/KilianKegel/CdePkg#cdepkg) and
 the [**_CdeValidationPkg_**](https://github.com/KilianKegel/CdeValidationPkg#cdevalidationpkg) to the
 UEFI/Tianocore open source community.**
 
-**edk2-vUDK2018** is the Git-*Subproject* in the [UDK2018-MinnowBoard](https://github.com/KilianKegel/UDK2018-MinnowBoard) project to build the MinnowBoard UEFI BIOS,
+**edk2-vUDK2018** is the Git-*Sub-Project* in the [UDK2018-MinnowBoard](https://github.com/KilianKegel/UDK2018-MinnowBoard) project to build the MinnowBoard UEFI BIOS,
 but can also be used stand alone in Emulation Mode (Nt32Pkg) (NOTE: In emulation mode timing calulation assumes to run a 1GHz platform).
 
 
 The MinnowBoard familiy is an *open source* Personal Computer hardware originally created by a company called
-*ADI Engineering*, that belongs now to [Silicom](https://www.silicom-usa.com/)
+*ADI Engineering*, that now belongs to [Silicom](https://www.silicom-usa.com/)
 
 Intel provides [binary modules](https://firmware.intel.com/projects/minnowboard-max) and maintains the [build environment](https://github.com/tianocore/edk2-platforms/blob/master/Platform/Intel/Vlv2TbltDevicePkg/Readme.md)
 to get the MinnowBoard running with the open source [UEFI BIOS Tianocore\EDK2](https://github.com/tianocore/edk2.git)
 
+The MinnowBoard is the only free available hardware/PC platform to get UEFI Tianocore BIOS running.
 
+**edk2-vUDK2018** is the Git-*Sub-Project* to build the EDK2 UEFI BIOS and demonstrates
+[**_CdePkg_**](https://github.com/KilianKegel/CdePkg#cdepkg) and [**_CdeValidationPkg_**](https://github.com/KilianKegel/CdeValidationPkg#cdevalidationpkg)
+in emulation mode (Nt32Pkg)
 ## Goal
 1. 	**The main aspect is, to introduce the [**_CdePkg_**](https://github.com/KilianKegel/CdePkg#cdepkg) and
 	the [**_CdeValidationPkg_**](https://github.com/KilianKegel/CdeValidationPkg#cdevalidationpkg) to the
@@ -40,7 +44,7 @@ to get the MinnowBoard running with the open source [UEFI BIOS Tianocore\EDK2](h
 3. use OpenSSL_1_1_0-stable in the component CryptoPkg\Library\OpensslLib
 
 
-It is considered an improvement over traditional UEFI BIOS development, since it introduces
+**CdePkg** is considered an improvement over traditional UEFI BIOS development, since it introduces
 * stable, precise, chipset (ACPI timer) independent C library conform [`clock()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/clock?view=vs-2019) for POST and UEFI Shell in millisecond resolution
 * unlimited (buffer less) [`printf()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l?view=vs-2019)-family and [`scanf()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l?view=vs-2019)-family implementation
 * Standard C conform format specifiers for [`printf()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l?view=vs-2019)-family and [`scanf()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l?view=vs-2019)-family
