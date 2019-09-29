@@ -1,14 +1,14 @@
-# **edk2-vUDK2018** / [**CdePkg**](https://github.com/MinnowWare/CdePkg#cdepkg)
-* [Introduction](https://github.com/MinnowWare/edk2-vUDK2018#introduction)
-* [Goal](https://github.com/MinnowWare/edk2-vUDK2018#goal)
-* [HowTo/install/build](https://github.com/MinnowWare/edk2-vUDK2018#howtoinstallbuildedit)
-	* [Installation](https://github.com/MinnowWare/edk2-vUDK2018#installation)
-	* [Directory structure](https://github.com/MinnowWare/edk2-vUDK2018#directory-structure)
-	* [Build](https://github.com/MinnowWare/edk2-vUDK2018#build)
-	* [Edit](https://github.com/MinnowWare/edk2-vUDK2018#edit)
-* [Known Bugs](https://github.com/MinnowWare/edk2-vUDK2018#known-bugs)
-* [Related Projects](https://github.com/MinnowWare/edk2-vUDK2018#related-projects)
-* [Revision History](https://github.com/MinnowWare/edk2-vUDK2018#revision-history)
+# **edk2-vUDK2018** / [**CdePkg**](https://github.com/KilianKegel/CdePkg#cdepkg)
+* [Introduction](https://github.com/KilianKegel/edk2-vUDK2018#introduction)
+* [Goal](https://github.com/KilianKegel/edk2-vUDK2018#goal)
+* [HowTo/install/build](https://github.com/KilianKegel/edk2-vUDK2018#howtoinstallbuildedit)
+	* [Installation](https://github.com/KilianKegel/edk2-vUDK2018#installation)
+	* [Directory structure](https://github.com/KilianKegel/edk2-vUDK2018#directory-structure)
+	* [Build](https://github.com/KilianKegel/edk2-vUDK2018#build)
+	* [Edit](https://github.com/KilianKegel/edk2-vUDK2018#edit)
+* [Known Bugs](https://github.com/KilianKegel/edk2-vUDK2018#known-bugs)
+* [Related Projects](https://github.com/KilianKegel/edk2-vUDK2018#related-projects)
+* [Revision History](https://github.com/KilianKegel/edk2-vUDK2018#revision-history)
 
 
 ![pci1](https://minnowboard.org/wp-content/uploads/2017/10/MBTurbot-quad-core-Top-0001-171002-1-555x370.png)
@@ -16,11 +16,11 @@
 https://minnowboard.org/
 
 ## Introduction
-**This **edk2-vUDK2018** introduces the [**_CdePkg_**](https://github.com/MinnowWare/CdePkg#cdepkg) and
-the [**_CdeValidationPkg_**](https://github.com/MinnowWare/CdeValidationPkg#cdevalidationpkg) to the
+**This **edk2-vUDK2018** introduces the [**_CdePkg_**](https://github.com/KilianKegel/CdePkg#cdepkg) and
+the [**_CdeValidationPkg_**](https://github.com/KilianKegel/CdeValidationPkg#cdevalidationpkg) to the
 UEFI/Tianocore open source community.**
 
-**edk2-vUDK2018** is the Git-*Subproject* in the [UDK2018-MinnowBoard](https://github.com/MinnowWare/UDK2018-MinnowBoard) project to build the MinnowBoard UEFI BIOS,
+**edk2-vUDK2018** is the Git-*Subproject* in the [UDK2018-MinnowBoard](https://github.com/KilianKegel/UDK2018-MinnowBoard) project to build the MinnowBoard UEFI BIOS,
 but can also be used stand alone in Emulation Mode (Nt32Pkg) (NOTE: In emulation mode timing calulation assumes to run a 1GHz platform).
 
 
@@ -32,8 +32,8 @@ to get the MinnowBoard running with the open source [UEFI BIOS Tianocore\EDK2](h
 
 
 ## Goal
-1. 	**The main aspect is, to introduce the [**_CdePkg_**](https://github.com/MinnowWare/CdePkg#cdepkg) and
-	the [**_CdeValidationPkg_**](https://github.com/MinnowWare/CdeValidationPkg#cdevalidationpkg) to the
+1. 	**The main aspect is, to introduce the [**_CdePkg_**](https://github.com/KilianKegel/CdePkg#cdepkg) and
+	the [**_CdeValidationPkg_**](https://github.com/KilianKegel/CdeValidationPkg#cdevalidationpkg) to the
 	UEFI/Tianocore open source community.**
 
 2. get the MinnowBoard and the EDK2 Emulation (Nt32Pkg) running with the latest released UDK2018 and the latest Visual Studio VS2019 buildenvironment
@@ -55,35 +55,35 @@ NOTE: Visual Studio is here only used for editing the project. The build process
 
 ## HowTo install/build/Edit
 ### Installation
-1. install a build machine according to https://github.com/MinnowWare/HowTo-setup-an-UEFI-Development-PC#howto-setup-an-uefi-development-pc
+1. install a build machine according to https://github.com/KilianKegel/HowTo-setup-an-UEFI-Development-PC#howto-setup-an-uefi-development-pc
 
 2. clone the UDK2018-MinnowBoard project `--recursive`<br>
-	i.  git.exe clone --progress --recursive -v "https://github.com/MinnowWare/UDK2018-MinnowBoard.git" "A:\UDK2018-MinnowBoard"<br>
+	i.  git.exe clone --progress --recursive -v "https://github.com/KilianKegel/UDK2018-MinnowBoard.git" "A:\UDK2018-MinnowBoard"<br>
 	or<br>
 	ii. right click to open the context menu -> Git clone<br>
 ![cloneimage2](clonedest.png)
 ### Directory structure
 The given MinnowBoard SourceCode tree is extended by files and directories shown below:
 
-![dirarch](https://github.com/MinnowWare/pictures/blob/master/directory.png)
+![dirarch](https://github.com/KilianKegel/pictures/blob/master/directory.png)
 
 |  root    | subdir        | subsubdir|annotation|
 |:-|:-|:-|:-|
-|**`  <DIR>  UDK2018-MinnowBoard`** |**`..`**|               |[@link](https://github.com/MinnowWare/UDK2018-MinnowBoard)|
-|          |**`bldDBG.bat`**               |       |batch to build the MinnowBoard BIOS in DEBUG mode [@link](https://github.com/MinnowWare/UDK2018-MinnowBoard/blob/master/bldDBG.BAT)|
-|          |**`bldREL.bat`**               |       |batch to build the MinnowBoard BIOS in RELEASE mode [@link](https://github.com/MinnowWare/UDK2018-MinnowBoard/blob/master/bldREL.BAT)|
-|          |**`launch2019.bat`**               |       |start the VS2019 MinnowBoard build environment[@link](https://github.com/MinnowWare/UDK2018-MinnowBoard/blob/master/launch2019.bat)|
-|          |**`launch2017.bat`**               |       |start the VS2019 MinnowBoard build environment[@link](https://github.com/MinnowWare/UDK2018-MinnowBoard/blob/master/launch2017.bat)|
-|          |**`UDK2018-MinnowBoard.sln`**  |       |Visual Studio Solution to *edit only* the entire source tree [@link](https://github.com/MinnowWare/UDK2018-MinnowBoard/blob/master/UDK2018-Minnowboard.sln)|
-|          |**`  <DIR>  edk2`** |**`..`**       | GIT-subproject [@link](https://github.com/MinnowWare/edk2-vUDK2018)|
-|          |               |**`bldDBG.bat`**       | batch to build the EDK2 emulation (Nt32Pkg) BIOS in DEBUG mode [@link](https://github.com/MinnowWare/edk2-vUDK2018/blob/master/bldDBG.BAT)|
-|          |               |**`CdePkg.sln`**       | Visual Studio solution to edit/build **`CdePkg`** [@link](https://github.com/MinnowWare/edk2-vUDK2018/blob/master/CdePkg.sln)|
-|          |               |**`CdeValidationPkg.sln`**       | Visual Studio solution to edit/build **`CdeValidationPkg`** [@link](https://github.com/MinnowWare/edk2-vUDK2018/blob/master/CdeValidationPkg.sln)|
-|          |               |**`edk2-vUDK2018.sln`**       |Visual Studio solution to edit/only **`CdeValidationPkg`** [@link](https://github.com/MinnowWare/edk2-vUDK2018/blob/master/edk2-vUDK2018.sln)|
-|          |               |**`launch2019.bat`**               |start the VS2019 EDK2 emulation (Nt32Pkg) build environment[@link](https://github.com/MinnowWare/edk2-vUDK2018/blob/master/launch2019.bat)|
-|          |               |**`launch2017.bat`**               |start the VS2017 EDK2 emulation (Nt32Pkg) build environment[@link](https://github.com/MinnowWare/edk2-vUDK2018/blob/master/launch2017.bat)|
-|          |               |**`  <DIR>  CdePkg`**              |**CdePkg** C Development Environment Package[@link](https://github.com/MinnowWare/CdePkg)|
-|          |               |**`  <DIR>  CdeValidationPkg`**              |**CdeValidationPkg** C Development Environment Package[@link](https://github.com/MinnowWare/CdeValidationPkg)|
+|**`  <DIR>  UDK2018-MinnowBoard`** |**`..`**|               |[@link](https://github.com/KilianKegel/UDK2018-MinnowBoard)|
+|          |**`bldDBG.bat`**               |       |batch to build the MinnowBoard BIOS in DEBUG mode [@link](https://github.com/KilianKegel/UDK2018-MinnowBoard/blob/master/bldDBG.BAT)|
+|          |**`bldREL.bat`**               |       |batch to build the MinnowBoard BIOS in RELEASE mode [@link](https://github.com/KilianKegel/UDK2018-MinnowBoard/blob/master/bldREL.BAT)|
+|          |**`launch2019.bat`**               |       |start the VS2019 MinnowBoard build environment[@link](https://github.com/KilianKegel/UDK2018-MinnowBoard/blob/master/launch2019.bat)|
+|          |**`launch2017.bat`**               |       |start the VS2019 MinnowBoard build environment[@link](https://github.com/KilianKegel/UDK2018-MinnowBoard/blob/master/launch2017.bat)|
+|          |**`UDK2018-MinnowBoard.sln`**  |       |Visual Studio Solution to *edit only* the entire source tree [@link](https://github.com/KilianKegel/UDK2018-MinnowBoard/blob/master/UDK2018-Minnowboard.sln)|
+|          |**`  <DIR>  edk2`** |**`..`**       | GIT-subproject [@link](https://github.com/KilianKegel/edk2-vUDK2018)|
+|          |               |**`bldDBG.bat`**       | batch to build the EDK2 emulation (Nt32Pkg) BIOS in DEBUG mode [@link](https://github.com/KilianKegel/edk2-vUDK2018/blob/master/bldDBG.BAT)|
+|          |               |**`CdePkg.sln`**       | Visual Studio solution to edit/build **`CdePkg`** [@link](https://github.com/KilianKegel/edk2-vUDK2018/blob/master/CdePkg.sln)|
+|          |               |**`CdeValidationPkg.sln`**       | Visual Studio solution to edit/build **`CdeValidationPkg`** [@link](https://github.com/KilianKegel/edk2-vUDK2018/blob/master/CdeValidationPkg.sln)|
+|          |               |**`edk2-vUDK2018.sln`**       |Visual Studio solution to edit/only **`CdeValidationPkg`** [@link](https://github.com/KilianKegel/edk2-vUDK2018/blob/master/edk2-vUDK2018.sln)|
+|          |               |**`launch2019.bat`**               |start the VS2019 EDK2 emulation (Nt32Pkg) build environment[@link](https://github.com/KilianKegel/edk2-vUDK2018/blob/master/launch2019.bat)|
+|          |               |**`launch2017.bat`**               |start the VS2017 EDK2 emulation (Nt32Pkg) build environment[@link](https://github.com/KilianKegel/edk2-vUDK2018/blob/master/launch2017.bat)|
+|          |               |**`  <DIR>  CdePkg`**              |**CdePkg** C Development Environment Package[@link](https://github.com/KilianKegel/CdePkg)|
+|          |               |**`  <DIR>  CdeValidationPkg`**              |**CdeValidationPkg** C Development Environment Package[@link](https://github.com/KilianKegel/CdeValidationPkg)|
 
 
 ### Build
@@ -104,11 +104,11 @@ If a DediProg is connected to the system, the BIOS is automatically updated in t
 
 ### Edit
 
-UDK2018-MinnowBoard is the Git-[Superproject **UDK2018-MinnowBoard**](https://github.com/MinnowWare/UDK2018-MinnowBoard) to build the MinnowBoard UEFI BIOS.
+UDK2018-MinnowBoard is the Git-[Superproject **UDK2018-MinnowBoard**](https://github.com/KilianKegel/UDK2018-MinnowBoard) to build the MinnowBoard UEFI BIOS.
 
-It includes the *edk2* which is the Git-[Subproject **edk2-vUDK2018**](https://github.com/MinnowWare/edk2-vUDK2018), that in turn
-includes the *Cde*-directories as GIT-[Subproject **CdePkg**](https://github.com/MinnowWare/CdePkg) and 
-GIT-[Subproject **CdeValidationPkg**](https://github.com/MinnowWare/CdeValidationPkg).
+It includes the *edk2* which is the Git-[Subproject **edk2-vUDK2018**](https://github.com/KilianKegel/edk2-vUDK2018), that in turn
+includes the *Cde*-directories as GIT-[Subproject **CdePkg**](https://github.com/KilianKegel/CdePkg) and 
+GIT-[Subproject **CdeValidationPkg**](https://github.com/KilianKegel/CdeValidationPkg).
 
 # Related Projects
 | related project|annotation|
@@ -116,11 +116,11 @@ GIT-[Subproject **CdeValidationPkg**](https://github.com/MinnowWare/CdeValidatio
 |[Torito C Library](https://github.com/JoaquinConoBolillo/torito-C-Library#torito-c-library)|C Library for UEFI Shell only. All projects below are built on or derived from *Torito C Library*|
 |[Visual ANSI C for UEFI Shell](https://github.com/JoaquinConoBolillo/Visual-ANSI-C-for-UEFI-Shell#visual-ansi-c-for-uefi-shell)|Visual Studio for UEFI Shell for beginners.|
 |[Visual DOS Tools for UEFI Shell](https://github.com/JoaquinConoBolillo/Visual-DOS-Tools-for-UEFI-Shell#visual-dos-tools-for-uefi-shell)|more command implementation|
-|[Visual HWTools for UEFI Shell](https://github.com/MinnowWare/Visual-HWTools-for-UEFI-Shell#visual-hwtools-for-uefi-shell)|HWTools: PCI- and GPIOSpy for Baytrail. MemSpy for all.|
-|[UDK2018-Minnowboard](https://github.com/MinnowWare/UDK2018-MinnowBoard#udk2018-minnowboard--cdepkg)|Gets the MinnowBoard running with the latest released EDK sourcecode and demonstrates *CdePkg* on real hardware|
-|[edk2-UDK2018](https://github.com/MinnowWare/edk2-vUDK2018#edk2-udk2018--cdepkg)|Gets the Emulation (Nt32Pkg) running with the latest released EDK sourcecode and demonstrates *CdePkg* on the Windows Desktop|
-|[CdePkg](https://github.com/MinnowWare/CdePkg#cdepkg)|*Torito C Library* redone for UEFI POST usage|
-|[CdeValidationPkg](https://github.com/MinnowWare/CdeValidationPkg#cdevalidationpkg)|Unit tests for *CdePkg*|
+|[Visual HWTools for UEFI Shell](https://github.com/KilianKegel/Visual-HWTools-for-UEFI-Shell#visual-hwtools-for-uefi-shell)|HWTools: PCI- and GPIOSpy for Baytrail. MemSpy for all.|
+|[UDK2018-Minnowboard](https://github.com/KilianKegel/UDK2018-MinnowBoard#udk2018-minnowboard--cdepkg)|Gets the MinnowBoard running with the latest released EDK sourcecode and demonstrates *CdePkg* on real hardware|
+|[edk2-UDK2018](https://github.com/KilianKegel/edk2-vUDK2018#edk2-udk2018--cdepkg)|Gets the Emulation (Nt32Pkg) running with the latest released EDK sourcecode and demonstrates *CdePkg* on the Windows Desktop|
+|[CdePkg](https://github.com/KilianKegel/CdePkg#cdepkg)|*Torito C Library* redone for UEFI POST usage|
+|[CdeValidationPkg](https://github.com/KilianKegel/CdeValidationPkg#cdevalidationpkg)|Unit tests for *CdePkg*|
 
 ## Revision history
 ### 20190906/improve tool chain check
