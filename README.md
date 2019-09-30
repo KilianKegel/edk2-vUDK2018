@@ -125,6 +125,9 @@ GIT-[Subproject **CdeValidationPkg**](https://github.com/KilianKegel/CdeValidati
 |[edk2-UDK2018](https://github.com/KilianKegel/edk2-vUDK2018#edk2-udk2018--cdepkg)|Gets the Emulation (Nt32Pkg) running with the latest released EDK sourcecode and demonstrates *CdePkg* on the Windows Desktop|
 |[CdePkg](https://github.com/KilianKegel/CdePkg#cdepkg)|*Torito C Library* redone for UEFI POST usage|
 |[CdeValidationPkg](https://github.com/KilianKegel/CdeValidationPkg#cdevalidationpkg)|Unit tests for *CdePkg*|
+## Known Bugs
+1. fixed 20190830: <del>*Capsule* doesn't work.</del>
+2. before BIOS build previous *CdePkg* build and FV files has to be deleted manually (clrCdePkgBuild.bat)
 
 ## Revision history
 ### 20190906/improve tool chain check
