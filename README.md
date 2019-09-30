@@ -1,7 +1,7 @@
 # **edk2-vUDK2018** / [**CdePkg**](https://github.com/KilianKegel/CdePkg#cdepkg)
 * [Introduction](https://github.com/KilianKegel/edk2-vUDK2018#introduction-edk2-vudk2018)
 * [Goal](https://github.com/KilianKegel/edk2-vUDK2018#goal)
-* [HowTo/install/build](https://github.com/KilianKegel/edk2-vUDK2018#howtoinstallbuildedit)
+* [HowTo/install/build](https://github.com/KilianKegel/edk2-vUDK2018#howto-installbuildedit)
 	* [Installation](https://github.com/KilianKegel/edk2-vUDK2018#installation)
 	* [Directory structure](https://github.com/KilianKegel/edk2-vUDK2018#directory-structure)
 	* [Build](https://github.com/KilianKegel/edk2-vUDK2018#build)
